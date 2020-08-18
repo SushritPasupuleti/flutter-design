@@ -2,6 +2,7 @@ import 'package:direct_select_flutter/direct_select_container.dart';
 import 'package:direct_select_flutter/direct_select_item.dart';
 import 'package:direct_select_flutter/direct_select_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_beautiful_popup/main.dart';
 
 class DirectForm extends StatefulWidget {
   DirectForm({Key key, this.title}) : super(key: key);
@@ -171,35 +172,35 @@ class _DirectFormState extends State<DirectForm> {
                           decoration: _getShadowDecoration(),
                           child: Card(
                               child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: <Widget>[
-                                  Expanded(
-                                      child: Padding(
-                                          child: DirectSelectList<String>(
-                                              values: _foodVariants,
-                                              onUserTappedListener: () {
-                                                _showScaffold();
-                                                debugPrint("Wow");
-                                              },
-                                              defaultItemIndex:
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Expanded(
+                                  child: Padding(
+                                      child: DirectSelectList<String>(
+                                          values: _foodVariants,
+                                          onUserTappedListener: () {
+                                            _showScaffold();
+                                            debugPrint("Wow");
+                                          },
+                                          defaultItemIndex:
                                               selectedFoodVariants,
-                                              itemBuilder: (String value) =>
-                                                  getDropDownMenuItem(value),
-                                              focusedItemDecoration:
+                                          itemBuilder: (String value) =>
+                                              getDropDownMenuItem(value),
+                                          focusedItemDecoration:
                                               _getDslDecoration(),
-                                              onItemSelectedListener:
-                                                  (item, index, context) {
-                                                setState(() {
-                                                  selectedFoodVariants = index;
-                                                });
-                                              }),
-                                          padding: EdgeInsets.only(left: 22))),
-                                  Padding(
-                                    padding: EdgeInsets.only(right: 8),
-                                    child: _getDropdownIcon(),
-                                  )
-                                ],
-                              )),
+                                          onItemSelectedListener:
+                                              (item, index, context) {
+                                            setState(() {
+                                              selectedFoodVariants = index;
+                                            });
+                                          }),
+                                      padding: EdgeInsets.only(left: 22))),
+                              Padding(
+                                padding: EdgeInsets.only(right: 8),
+                                child: _getDropdownIcon(),
+                              )
+                            ],
+                          )),
                         ),
                       ),
                       SizedBox(height: 15.0),
@@ -215,36 +216,31 @@ class _DirectFormState extends State<DirectForm> {
                               decoration: _getShadowDecoration(),
                               child: Card(
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment
-                                        .center,
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: <Widget>[
-                                      Expanded(
-                                          child: Padding(
-                                              child: DirectSelectList<String>(
-                                                  onUserTappedListener:
-                                                      () {
-                                                    _showScaffold();
-                                                  },
-                                                  values: _numbers,
-                                                  defaultItemIndex:
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  Expanded(
+                                      child: Padding(
+                                          child: DirectSelectList<String>(
+                                              onUserTappedListener: () {
+                                                _showScaffold();
+                                              },
+                                              values: _numbers,
+                                              defaultItemIndex:
                                                   selectedPortionCounts,
-                                                  itemBuilder: (String value) =>
-                                                      getDropDownMenuItem(
-                                                          value),
-                                                  focusedItemDecoration:
+                                              itemBuilder: (String value) =>
+                                                  getDropDownMenuItem(value),
+                                              focusedItemDecoration:
                                                   _getDslDecoration(),
-                                                  onItemSelectedListener:
-                                                      (item, index, context) {
-                                                    setState(() {
-                                                      selectedPortionCounts =
-                                                          index;
-                                                    });
-                                                  }),
-                                              padding: EdgeInsets.only(
-                                                  left: 22))),
-                                    ],
-                                  )),
+                                              onItemSelectedListener:
+                                                  (item, index, context) {
+                                                setState(() {
+                                                  selectedPortionCounts = index;
+                                                });
+                                              }),
+                                          padding: EdgeInsets.only(left: 22))),
+                                ],
+                              )),
                             )),
                         Expanded(
                             flex: 8,
@@ -252,43 +248,58 @@ class _DirectFormState extends State<DirectForm> {
                               decoration: _getShadowDecoration(),
                               child: Card(
                                   child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: <Widget>[
-                                      Expanded(
-                                          child: Padding(
-                                              child: DirectSelectList<String>(
-                                                  values: _portionSize,
-                                                  defaultItemIndex:
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  Expanded(
+                                      child: Padding(
+                                          child: DirectSelectList<String>(
+                                              values: _portionSize,
+                                              defaultItemIndex:
                                                   selectedPortionSize,
-                                                  itemBuilder: (String value) =>
-                                                      getDropDownMenuItem(
-                                                          value),
-                                                  focusedItemDecoration:
+                                              itemBuilder: (String value) =>
+                                                  getDropDownMenuItem(value),
+                                              focusedItemDecoration:
                                                   _getDslDecoration(),
-                                                  onItemSelectedListener:
-                                                      (item, index, context) {
-                                                    setState(() {
-                                                      selectedPortionSize =
-                                                          index;
-                                                    });
-                                                  }),
-                                              padding: EdgeInsets.only(
-                                                  left: 22))),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 8),
-                                        child: _getDropdownIcon(),
-                                      )
-                                    ],
-                                  )),
+                                              onItemSelectedListener:
+                                                  (item, index, context) {
+                                                setState(() {
+                                                  selectedPortionSize = index;
+                                                });
+                                              }),
+                                          padding: EdgeInsets.only(left: 22))),
+                                  Padding(
+                                    padding: EdgeInsets.only(right: 8),
+                                    child: _getDropdownIcon(),
+                                  )
+                                ],
+                              )),
                             )),
                       ]),
                       Row(children: <Widget>[
                         Expanded(
                             child: RaisedButton(
-                              child: const Text('ADD TO JOURNAL',
-                                  style: TextStyle(color: Colors.blueAccent)),
-                              onPressed: () {},
-                            ))
+                          child: const Text('ADD TO JOURNAL',
+                              style: TextStyle(color: Colors.blueAccent)),
+                          onPressed: () {
+                            final popup = BeautifulPopup(
+                              context: context,
+                              template: TemplateSuccess,
+                            );
+
+                            popup.show(
+                              title: 'String or Widget',
+                              content: 'String or Widget',
+                              actions: [
+                                popup.button(
+                                  label: 'Close',
+                                  onPressed: Navigator.of(context).pop,
+                                ),
+                              ],
+                              // bool barrierDismissible = false,
+                              // Widget close,
+                            );
+                          },
+                        ))
                       ]),
                     ],
                   ),
@@ -349,24 +360,24 @@ class MealSelector extends StatelessWidget {
             decoration: _getShadowDecoration(),
             child: Card(
                 child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Expanded(
-                        child: Padding(
-                            child: DirectSelectList<String>(
-                              values: data,
-                              defaultItemIndex: 0,
-                              itemBuilder: (String value) =>
-                                  getDropDownMenuItem(value),
-                              focusedItemDecoration: _getDslDecoration(),
-                            ),
-                            padding: EdgeInsets.only(left: 12))),
-                    Padding(
-                      padding: EdgeInsets.only(right: 8),
-                      child: _getDropdownIcon(),
-                    )
-                  ],
-                )),
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Expanded(
+                    child: Padding(
+                        child: DirectSelectList<String>(
+                          values: data,
+                          defaultItemIndex: 0,
+                          itemBuilder: (String value) =>
+                              getDropDownMenuItem(value),
+                          focusedItemDecoration: _getDslDecoration(),
+                        ),
+                        padding: EdgeInsets.only(left: 12))),
+                Padding(
+                  padding: EdgeInsets.only(right: 8),
+                  child: _getDropdownIcon(),
+                )
+              ],
+            )),
           ),
         ),
       ],
