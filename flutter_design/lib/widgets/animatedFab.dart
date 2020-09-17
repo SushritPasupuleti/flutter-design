@@ -58,7 +58,7 @@ class _FABDisplayState extends State<FABDisplay> with SingleTickerProviderStateM
               children: <Widget>[
                 IgnorePointer(
                     child: Container(
-                    color: Colors.black.withOpacity(0.5), // comment or change to transparent color
+                    //color: Colors.black.withOpacity(0.5), // comment or change to transparent color
                     height: 150.0,
                     width: 150.0,
                   ),
