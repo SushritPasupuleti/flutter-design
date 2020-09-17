@@ -75,7 +75,14 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return 
             //DirectForm();
-            FABDisplay();
+            //FABDisplay();
+            Scaffold(
+              appBar: AppBar(
+                title: Text("FAB"),
+              ),
+              body: FABDisplay(),
+              //floatingActionButton: 
+            );
           
   }
 }
