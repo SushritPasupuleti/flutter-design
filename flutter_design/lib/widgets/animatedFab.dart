@@ -51,7 +51,7 @@ class _FABDisplayState extends State<FABDisplay> with SingleTickerProviderStateM
         child: Stack(
           children: <Widget>[
             Positioned(
-              right: MediaQuery.of(context).size.width / 2 - 25,
+                right: 30,
                 bottom: 30,
                 child: Stack(
               alignment: Alignment.bottomRight,
@@ -83,7 +83,7 @@ class _FABDisplayState extends State<FABDisplay> with SingleTickerProviderStateM
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(315),degTwoTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(225),degTwoTranslationAnimation.value * 100),
                   child: Transform(
                     transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degTwoTranslationAnimation.value),
                     alignment: Alignment.center,
@@ -102,7 +102,7 @@ class _FABDisplayState extends State<FABDisplay> with SingleTickerProviderStateM
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(225),degThreeTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(180),degThreeTranslationAnimation.value * 100),
                   child: Transform(
                     transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degThreeTranslationAnimation.value),
                     alignment: Alignment.center,
