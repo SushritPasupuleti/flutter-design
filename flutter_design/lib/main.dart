@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design/widgets/directForm.dart';
 import 'package:flutter_design/widgets/neumorphcPage.dart';
-
+import 'package:flutter_design/widgets/animatedFab.dart';
 void main() {
   runApp(MyApp());
 }
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return 
             //DirectForm();
-            CalculatorSample();
+            FABDisplay();
           
   }
 }
