@@ -102,7 +102,7 @@ class _FABDisplayState extends State<FABDisplay> with SingleTickerProviderStateM
                   ),
                 ),
                 Transform.translate(
-                  offset: Offset.fromDirection(getRadiansFromDegree(180),degThreeTranslationAnimation.value * 100),
+                  offset: Offset.fromDirection(getRadiansFromDegree(225),degThreeTranslationAnimation.value * 100),
                   child: Transform(
                     transform: Matrix4.rotationZ(getRadiansFromDegree(rotationAnimation.value))..scale(degThreeTranslationAnimation.value),
                     alignment: Alignment.center,
